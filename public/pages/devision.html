@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  </head>
+  <style>
+    #ml {
+      position: relative;
+      min-height: 100vh;
+    }
+    #ml::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      min-height: 100vh;
+      filter: brightness(50%);
+      background-image: url(../assets/Images/devision-ml.png);
+      background-size: cover;
+      z-index: -2;
+    }
+    .swiper-container {
+      width: 100%;
+      height: auto;
+    }
+    .bg-active {
+      background-color: rgba(0, 0, 0, 1);
+    }
+    .player {
+      position: relative;
+      overflow: hidden;
+    }
+    .player::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 70%;
+      margin: auto;
+      background-color: aquamarine;
+      clip-path: polygon(0 18%, 100% 0, 100% 84%, 0% 100%);
+    }
+    .player-pict {
+      position: relative;
+      z-index: 2;
+      margin-bottom: -27px;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 77%, 33% 92%, 0 100%);
+    }
+    .logo-on-p {
+      top: 2rem;
+      right: 50px;
+      width: 20%;
+      position: absolute;
+      z-index: 2;
+    }
+    @media (min-width: 768px) {
+      .player-pict {
+        margin-bottom: -45px;
+      }
+      .logo-on-p {
+        right: 100px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .player-pict {
+        margin-bottom: -53px;
+      }
+      .logo-on-p {
+        right: 60px;
+      }
+    }
+  </style>
+  <body class="overflow-x-hidden z-40">
+    <header class="font-Schibsted">
+      <nav id="navbar" class="p-standart fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+          <figure class="w-[5rem]">
+            <img src="../assets/Images/logo.png" class="block max-w-full" alt="WG Logo" />
+          </figure>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              <li>
+                <a href="#" class="block text-white hover:text-slate-300" aria-current="page">About</a>
+              </li>
+              <li>
+                <a href="#" class="block text-white hover:text-slate-300 border">Devision</a>
+              </li>
+              <li>
+                <a href="#" class="block text-white hover:text-slate-300">Billing Price</a>
+              </li>
+              <li>
+                <a href="#" class="block text-white hover:text-slate-300">Location</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="header-bg" class="relative w-full">
+        <div id="headerBG" alt="Header BG" class="block w-full">
+          <figure id="bg-about" class="brightness-[.35]">
+            <img src="../assets/Images/demo-2.jpg" alt="devisionIMG" class="block w-full object-cover min-h-[100vh]" />
+          </figure>
+        </div>
+        <div class="flex flex-col text-left justify-center items-start text-white absolute top-0 left-0 w-full py-40 p-standart">
+          <h2 class="text-primaryGreen text-4xl min-[918px]:text-7xl text-center">GW ESPORT</h2>
+          <h2 class="text-white text-2xl min-[918px]:text-5xl font-Wireframe uppercase mt-4">point blank players</h2>
+          <!-- Players -->
+          <div class="swiper-container mt-20">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide w-full">
+                <figure class="player">
+                  <img src="../assets/Images/player 2 - Copy.png" alt="player" class="player-pict block max-w-full" />
+                </figure>
+                <figure class="logo-on-p">
+                  <img src="../assets/Images/logo.png" alt="player" class="block max-w-full" />
+                </figure>
+              </div>
+
+              <div class="swiper-slide">
+                <figure class="player">
+                  <img src="../assets/Images/player 1.png" alt="player" class="player-pict block max-w-full" />
+                </figure>
+                <figure class="logo-on-p">
+                  <img src="../assets/Images/logo.png" alt="player" class="block max-w-full" />
+                </figure>
+              </div>
+
+              <div class="swiper-slide">
+                <figure class="player">
+                  <img src="../assets/Images/gw3.png" alt="player" class="player-pict block max-w-full" />
+                </figure>
+                <figure class="logo-on-p">
+                  <img src="../assets/Images/logo.png" alt="player" class="block max-w-full" />
+                </figure>
+              </div>
+
+              <div class="swiper-slide">
+                <figure class="player">
+                  <img src="../assets/Images/gw1.png" alt="player" class="player-pict block max-w-full" />
+                </figure>
+                <figure class="logo-on-p">
+                  <img src="../assets/Images/logo.png" alt="player" class="block max-w-full" />
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure class="player">
+                  <img src="../assets/Images/gw2.png" alt="player" class="player-pict block max-w-full" />
+                </figure>
+                <figure class="logo-on-p">
+                  <img src="../assets/Images/logo.png" alt="player" class="block max-w-full" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- ML Players -->
+        <div id="ml" class="flex flex-col text-left justify-center items-start text-white w-full py-20 p-standart">
+          <h2 class="text-primaryGreen text-4xl min-[918px]:text-7xl text-center">GW ESPORT</h2>
+          <h2 class="text-white text-2xl min-[918px]:text-5xl font-Wireframe uppercase mt-4">mobile legends players</h2>
+          <figure class="h-[600px] w-full mt-10 border-4 border-white">
+            <img src="" alt="" />
+          </figure>
+          <div class="flex items-center gap-2">
+            <p class="font-semibold text-xl">Ready To Become a GW ESPORT Player?</p>
+            <button class="py-4 px-4 bg-primaryGreen text-black font-semibold mt-10 rounded-lg">Daftar Membership</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper-container", {
+          direction: "horizontal",
+          loop: true,
+          grabCursor: true,
+          slidesPerView: 1,
+          speed: 1000,
+          spaceBetween: 30,
+
+          autoplay: {
+            delay: 4000,
+          },
+
+          breakpoints: {
+            800: {
+              slidesPerView: 2,
+            },
+
+            900: {
+              slidesPerView: 4,
+            },
+          },
+
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: ".swiper-scrollbar",
+          },
+        });
+        // Your Swiper initialization code here...
+      });
+
+      const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+      const navbar = document.getElementById("navbar-default");
+
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true" || false;
+        button.setAttribute("aria-expanded", !expanded);
+        navbar.classList.toggle("hidden");
+      });
+
+      const header = document.querySelector("#navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          header.classList.add("bg-active");
+        } else {
+          header.classList.remove("bg-active");
+        }
+      });
+    </script>
+  </body>
+</html>

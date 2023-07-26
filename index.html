@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GW ESPORT</title>
+    <link rel="stylesheet" href="public/css/output.css" />
+    <link rel="stylesheet" href="./src/css/baseStyle.css" />
+  </head>
+  <body>
+    <style>
+      .bg-footer {
+        position: relative;
+      }
+      .bg-footer::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1a3218;
+        opacity: 0.95;
+        background-blend-mode: multiply;
+      }
+      #header-bg {
+        position: relative;
+      }
+      #headerBG figure {
+        filter: brightness(20%);
+      }
+
+      @media (max-width: 767px) {
+        #navbar-default ul {
+          background-color: white;
+        }
+      }
+    </style>
+    <div class="container-all">
+      <header class="font-Schibsted">
+        <nav class="p-standart fixed top-0 left-0 right-0 z-50">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+            <figure class="w-[5rem]">
+              <img src="./public/assets/Images/logo.png" class="block max-w-full" alt="WG Logo" />
+            </figure>
+
+            <button
+              data-collapse-toggle="navbar-default"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+              <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                <li>
+                  <a href="./public/pages/about.html" class="block py-2 pl-3 pr-4 text-white hover:text-slate-300" aria-current="page">About</a>
+                </li>
+                <li>
+                  <a href="./public/pages/devision.html" class="block py-2 pl-3 pr-4 text-white hover:text-slate-300">Devision</a>
+                </li>
+                <li>
+                  <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-slate-300">Billing Price</a>
+                </li>
+                <li>
+                  <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-slate-300">Location</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div id="header-bg" class="relative w-full">
+          <div id="headerBG" alt="Header BG" class="block w-full">
+            <figure>
+              <img src="./public/assets/Images/headerHome.jpg" alt="" class="block w-full h-[600px] min-[1100px]:h-[900px] object-cover" />
+            </figure>
+          </div>
+          <div class="flex flex-col text-left justify-center items-start text-white absolute top-0 left-0 w-full py-40 p-standart">
+            <h2 class="text-primaryGreen text-4xl min-[918px]:text-7xl font-Wireframe">Welcome To <br />Gamers warm esport</h2>
+            <p class="text-lg font-Arial mt-4">Kami menyediakan kunjungan terbaik bagi gamers untuk <br />berkembang dan bersaing di tingkat nasional</p>
+            <button class="py-4 px-4 bg-primaryGreen text-black font-semibold mt-10 rounded-lg">Daftar Membership</button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <figure class="bg-footer h-[400px] overflow-hidden w-full relative">
+          <figure>
+            <img src="./public/assets/Images/header-footer-home.png" alt="" class="block w-full object-cover" />
+          </figure>
+          <div class="absolute top-0 left-0 right-0 z-30 text-center py-20 px-[1.5rem]">
+            <div class="vision">
+              <h2 class="text-4xl min-[918px]:text-5xl text-primaryGreen">GW VISION</h2>
+              <p class="text-white font-Arial mt-4">Menjadi benchmark tertinggi dalam industri eSports di indonesia.</p>
+            </div>
+            <div class="vision mt-10">
+              <h2 class="text-4xl min-[918px]:text-5xl text-primaryGreen">GW Mission</h2>
+              <p class="text-white font-Arial mt-4">Ciptakan lingkungan terbaik bagi pemain game untuk unggul dan <br />bersaing di tingkat nasional.</p>
+            </div>
+          </div>
+        </figure>
+      </main>
+    </div>
+  </body>
+  <script>
+    const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const navbar = document.getElementById("navbar-default");
+
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") === "true" || false;
+      button.setAttribute("aria-expanded", !expanded);
+      navbar.classList.toggle("hidden");
+    });
+  </script>
+</html>
