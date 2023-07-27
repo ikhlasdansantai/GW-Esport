@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Price</title>
     <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="../../src/css/baseStyle.css" />
   </head>
   <body>
     <header class="font-Schibsted overflow-hidden">
@@ -28,16 +29,16 @@
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
-                <a href="./about.html" class="block text-white hover:text-slate-300" aria-current="page">About</a>
+                <a href="./about.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300" aria-current="page">About</a>
               </li>
               <li>
-                <a href="./devision.html" class="block text-white hover:text-slate-300">Devision</a>
+                <a href="./devision.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300">Devision</a>
               </li>
               <li>
-                <a href="#" class="block text-white hover:text-slate-300 border">Billing Price</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300">Billing Price</a>
               </li>
               <li>
-                <a href="./location.html" class="block text-white hover:text-slate-300">Location</a>
+                <a href="./location.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300">Location</a>
               </li>
             </ul>
           </div>
@@ -55,7 +56,7 @@
             <h2 class="text-primaryGreen text-2xl min-[918px]:text-5xl uppercase">billing price</h2>
           </div>
           <div id="cards" class="gap-10 flex flex-wrap justify-center min-[917px]:gap-10 mt-20">
-            <div class="card w-[20rem] bg-black text-white p-standart">
+            <div class="card w-full sm:w-[20rem] bg-black text-white p-standart">
               <h2 class="text-4xl text-primaryGreen">VIP</h2>
               <div class="price-containers flex flex-col gap-2 mt-6">
                 <div class="price-list flex items-center justify-between gap-4">
@@ -77,7 +78,7 @@
               </div>
             </div>
             <!-- Card -->
-            <div class="card w-[20rem] bg-black text-white p-standart">
+            <div class="card w-full sm:w-[20rem] bg-black text-white p-standart">
               <h2 class="text-4xl text-primaryGreen">PREMIUM</h2>
               <div class="price-containers flex flex-col gap-2 mt-6">
                 <div class="price-list flex items-center justify-between gap-4">
@@ -99,7 +100,7 @@
               </div>
             </div>
             <!-- Card -->
-            <div class="card w-[20rem] bg-black text-white p-standart">
+            <div class="card w-full sm:w-[20rem] bg-black text-white p-standart">
               <h2 class="text-4xl text-primaryGreen">REGULAR</h2>
               <div class="price-containers flex flex-col gap-2 mt-6">
                 <div class="price-list flex items-center justify-between gap-4">
@@ -121,7 +122,7 @@
               </div>
             </div>
             <!-- Card -->
-            <div class="card w-[20rem] bg-black text-white p-standart">
+            <div class="card w-full sm:w-[20rem] bg-black text-white p-standart">
               <h2 class="text-4xl text-primaryGreen">PAKET MALAM</h2>
               <div class="price-containers flex flex-col gap-2 mt-6">
                 <div class="price-list flex items-center justify-between gap-4">
@@ -217,5 +218,25 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+      const navbar = document.getElementById("navbar-default");
+
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true" || false;
+        button.setAttribute("aria-expanded", !expanded);
+        navbar.classList.toggle("hidden");
+      });
+
+      const header = document.querySelector("#navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          header.classList.add("bg-active");
+        } else {
+          header.classList.remove("bg-active");
+        }
+      });
+    </script>
   </body>
 </html>

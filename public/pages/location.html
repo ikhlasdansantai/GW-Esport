@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="../../src/css/baseStyle.css" />
   </head>
   <body>
     <header class="font-Schibsted overflow-hidden">
@@ -28,16 +29,16 @@
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
-                <a href="./about.html" class="block text-white hover:text-slate-300" aria-current="page">About</a>
+                <a href="./about.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300" aria-current="page">About</a>
               </li>
               <li>
-                <a href="./devision.html" class="block text-white hover:text-slate-300">Devision</a>
+                <a href="./devision.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300">Devision</a>
               </li>
               <li>
-                <a href="./price.html" class="block text-white hover:text-slate-300">Billing Price</a>
+                <a href="./price.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300">Billing Price</a>
               </li>
               <li>
-                <a href="#" class="block text-white hover:text-slate-300 border">Location</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300 border border-black">Location</a>
               </li>
             </ul>
           </div>
@@ -59,7 +60,7 @@
               <p>Blok Sekolah Jl. Melong Raya No.92A, Melong, Cimahi Selatan, Cimahi City, West Java 40534</p>
               <button class="py-4 px-4 bg-primaryGreen text-black font-semibold mt-10 rounded-lg uppercase mx-auto">Link Google Maps</button>
             </div>
-            <div class="location w-1/2">
+            <div class="location sm:w-1/2">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15843.03703487231!2d107.5599735!3d-6.9193581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e57d6fb72d57%3A0x34f6afec439d9763!2sGw%20Esports!5e0!3m2!1sid!2sid!4v1690386115763!5m2!1sid!2sid"
                 style="width: 100%; height: 500px"
@@ -142,5 +143,25 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+      const navbar = document.getElementById("navbar-default");
+
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true" || false;
+        button.setAttribute("aria-expanded", !expanded);
+        navbar.classList.toggle("hidden");
+      });
+
+      const header = document.querySelector("#navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          header.classList.add("bg-active");
+        } else {
+          header.classList.remove("bg-active");
+        }
+      });
+    </script>
   </body>
 </html>

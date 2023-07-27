@@ -8,3 +8,9 @@ ul li {
 #bantuan-ulMenu {
   margin-block: 0.5rem;
 }
+
+@media (max-width: 767px) {
+  #navbar-default ul {
+    background-color: white;
+  }
+}
