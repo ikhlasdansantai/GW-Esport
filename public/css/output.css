@@ -830,6 +830,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-red-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(41 41 48 / var(--tw-bg-opacity));
@@ -1265,6 +1270,10 @@ video {
 
   .lg\:h-\[1200px\] {
     height: 1200px;
+  }
+
+  .lg\:h-\[1600px\] {
+    height: 1600px;
   }
 
   .lg\:min-h-\[165vh\] {
