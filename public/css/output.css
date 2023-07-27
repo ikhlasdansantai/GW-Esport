@@ -675,6 +675,10 @@ video {
   height: 135vh;
 }
 
+.h-\[145vh\] {
+  height: 145vh;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
