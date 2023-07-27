@@ -699,6 +699,10 @@ video {
   min-height: ;
 }
 
+.min-h-\[165vh\] {
+  min-height: 165vh;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -1237,6 +1241,34 @@ video {
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
+  }
+
+  .lg\:h-\[165vh\] {
+    height: 165vh;
+  }
+
+  .lg\:h-\[20000px\] {
+    height: 20000px;
+  }
+
+  .lg\:h-\[1000px\] {
+    height: 1000px;
+  }
+
+  .lg\:h-\[1500px\] {
+    height: 1500px;
+  }
+
+  .lg\:h-\[1300px\] {
+    height: 1300px;
+  }
+
+  .lg\:h-\[1200px\] {
+    height: 1200px;
+  }
+
+  .lg\:min-h-\[165vh\] {
+    min-height: 165vh;
   }
 
   .lg\:grid-cols-4 {
