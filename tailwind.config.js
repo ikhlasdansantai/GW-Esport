@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html", "./public/**/*.{html,js}", "./src/**/*.{js}"],
+  content: ["index.html", "./public/**/*.{html,js}", "./src/**/*.js"],
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primaryGreen: "#02F801",
+        primaryGreen: "#00F900",
         secondary: "#2E5458",
         third: "#7FA68C",
         black: "#292930",
@@ -26,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         Arial: ["Arial", "sans-serif"],
-        Wireframe: ["Wireframe", "sans-serif"],
+        Wireframe: ["Wireframe"],
       },
     },
   },

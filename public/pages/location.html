@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="font-Schibsted overflow-hidden">
-      <nav id="navbar" class="p-standart fixed top-0 left-0 right-0 z-50">
+      <nav id="navbar" class="bg-active p-standart fixed top-0 left-0 right-0 z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <figure class="w-[5rem]">
             <img src="../assets/Images/logo.png" class="block max-w-full" alt="WG Logo" />
@@ -27,7 +27,10 @@
             </svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 font-Wireframe">
+              <li>
+                <a href="../../index.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300" aria-current="page">Home</a>
+              </li>
               <li>
                 <a href="./about.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300" aria-current="page">About</a>
               </li>
@@ -38,7 +41,7 @@
                 <a href="./price.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300">Billing Price</a>
               </li>
               <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300 border border-black">Location</a>
+                <a href="#" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300 border-4 border-black md:border-white">Location</a>
               </li>
             </ul>
           </div>
@@ -53,10 +56,10 @@
         <div class="flex flex-col text-left justify-center items-start text-white absolute top-0 left-0 w-full py-40 p-standart">
           <div class="text-left">
             <h2 class="text-primaryGreen text-4xl min-[918px]:text-7xl font-Wireframe uppercase">Location</h2>
+            <h2 class="text-white text-xl min-[918px]:text-3xl font-Wireframe uppercase">Maps</h2>
           </div>
           <div id="locations" class="w-full gap-10 flex items-stretch justify-between flex-col sm:flex-row min-[917px]:gap-10 mt-20">
             <div class="desc">
-              <h2 class="text-primaryGreen text-2xl min-[918px]:text-5xl uppercase">maps</h2>
               <p>Blok Sekolah Jl. Melong Raya No.92A, Melong, Cimahi Selatan, Cimahi City, West Java 40534</p>
               <button class="py-4 px-4 bg-primaryGreen text-black font-semibold mt-10 rounded-lg uppercase mx-auto">Link Google Maps</button>
             </div>
@@ -73,9 +76,9 @@
         </div>
       </div>
     </header>
-    <footer class="py-2 p-standart">
+    <footer class="bg-black py-2 p-standart">
       <div class="w-full sosmed grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="wa flex md:justify-center items-center gap-3">
+        <div class="wa flex md:justify-center items-center gap-3 text-white">
           <figure class="w-[2rem]">
             <svg xmlns="http://www.w3.org/2000/svg" class="block max-w-full" viewBox="0 0 256 258">
               <defs>
@@ -104,7 +107,7 @@
           </figure>
           <span>08214898595</span>
         </div>
-        <div class="ig flex md:justify-center items-center gap-3">
+        <div class="ig flex md:justify-center items-center gap-3 text-white">
           <figure class="w-[2rem]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
               <g fill="none">
@@ -132,7 +135,7 @@
           </figure>
           <span>gwgamingesport</span>
         </div>
-        <div class="fb flex md:justify-center items-center gap-3">
+        <div class="fb flex md:justify-center items-center gap-3 text-white">
           <figure class="w-[2rem]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
               <rect width="118.35" height="118.35" x="4.83" y="4.83" fill="#3d5a98" rx="6.53" ry="6.53" />
@@ -152,15 +155,6 @@
         const expanded = button.getAttribute("aria-expanded") === "true" || false;
         button.setAttribute("aria-expanded", !expanded);
         navbar.classList.toggle("hidden");
-      });
-
-      const header = document.querySelector("#navbar");
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 100) {
-          header.classList.add("bg-active");
-        } else {
-          header.classList.remove("bg-active");
-        }
       });
     </script>
   </body>

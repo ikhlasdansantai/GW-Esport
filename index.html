@@ -30,9 +30,7 @@
       #headerBG figure {
         filter: brightness(20%);
       }
-      .bg-active {
-        background-color: rgba(0, 0, 0, 1);
-      }
+
       @media (max-width: 767px) {
         #navbar-default ul {
           background-color: white;
@@ -41,7 +39,7 @@
     </style>
     <div class="container-all">
       <header class="font-Schibsted">
-        <nav id="navbar" class="p-standart fixed top-0 left-0 right-0 z-50">
+        <nav id="navbar" class="bg-active p-standart fixed top-0 left-0 right-0 z-50">
           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
             <figure class="w-[5rem]">
               <img src="./public/assets/Images/logo.png" class="block max-w-full" alt="WG Logo" />
@@ -59,8 +57,11 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
               </svg>
             </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-              <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <div class="hidden w-full min-[940px]:block min-[940px]:w-auto" id="navbar-default">
+              <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 font-Wireframe">
+                <li>
+                  <a href="./public/pages/about.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300 border-4 border-black md:border-black" aria-current="page">home</a>
+                </li>
                 <li>
                   <a href="./public/pages/about.html" class="block py-2 pl-3 pr-4 text-black md:text-white hover:text-slate-300" aria-current="page">About</a>
                 </li>
@@ -79,15 +80,20 @@
         </nav>
         <div id="header-bg" class="relative w-full">
           <div id="headerBG" alt="Header BG" class="block w-full">
-            <figure>
-              <img src="./public/assets/Images/headerHome.jpg" alt="" class="block w-full h-[600px] min-[1100px]:h-[900px] object-cover" />
+            <figure class="brightness-[.4] overflow-hidden">
+              <img src="./public/assets/Images/bg utama.jpg" alt="header BG" class="h-[100vh] block w-full object-cover" />
             </figure>
           </div>
-          <div class="flex flex-col text-left justify-center items-start text-white absolute top-0 left-0 w-full py-40 p-standart">
-            <h2 class="text-primaryGreen text-4xl min-[918px]:text-7xl font-Wireframe">Welcome To <br />Gamers warm esport</h2>
-            <p class="text-lg font-Arial mt-4">Kami menyediakan kunjungan terbaik bagi gamers untuk <br />berkembang dan bersaing di tingkat nasional</p>
-            <button class="py-4 px-4 bg-primaryGreen text-black font-semibold mt-10 rounded-lg">Daftar Membership</button>
+          <div class="flex flex-col min-h-[100vh] text-left justify-center items-start text-white absolute top-0 left-0 w-full py-60 p-standart max-w-screen-xl mx-auto">
+            <div class="mt-4">
+              <h2 class="text-primaryGreen text-3xl min-[918px]:text-4xl xl:text-5xl font-Wireframe">Welcome To <br />Gamers warm esport</h2>
+              <p class="text-lg font-Arial mt-4">Kami menyediakan kunjungan terbaik bagi gamers untuk <br />berkembang dan bersaing di tingkat nasional</p>
+              <button class="py-4 px-4 bg-primaryGreen text-black font-semibold mt-10 rounded-lg font-Wireframe">Daftar Membership</button>
+            </div>
           </div>
+          <figure class="player-r hidden lg:block absolute right-0 bottom-0 z-10 w-[25rem] brightness-[.45]">
+            <img src="./public/assets/Images/player 2 - Copy.png" alt="player" class="block max-w-full" />
+          </figure>
         </div>
       </header>
       <main>
@@ -97,16 +103,19 @@
           </figure>
           <div class="absolute top-0 left-0 right-0 z-30 text-center py-20 px-[1.5rem]">
             <div class="vision">
-              <h2 class="text-4xl min-[918px]:text-5xl text-primaryGreen">GW VISION</h2>
+              <h2 class="font-Wireframe min-[918px]:text-5xl text-primaryGreen">GW VISION</h2>
               <p class="text-white font-Arial mt-4">Menjadi benchmark tertinggi dalam industri eSports di indonesia.</p>
             </div>
             <div class="vision mt-10">
-              <h2 class="text-4xl min-[918px]:text-5xl text-primaryGreen">GW Mission</h2>
+              <h2 class="font-Wireframe min-[918px]:text-5xl text-primaryGreen">GW Mission</h2>
               <p class="text-white font-Arial mt-4">Ciptakan lingkungan terbaik bagi pemain game untuk unggul dan <br />bersaing di tingkat nasional.</p>
             </div>
           </div>
         </figure>
       </main>
+      <footer class="bg-active p-standart text-center text-white">
+        <h2>Copyright Gw Esport © 2023</h2>
+      </footer>
     </div>
   </body>
   <script>
@@ -117,15 +126,6 @@
       const expanded = button.getAttribute("aria-expanded") === "true" || false;
       button.setAttribute("aria-expanded", !expanded);
       navbar.classList.toggle("hidden");
-    });
-
-    const header = document.querySelector("#navbar");
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) {
-        header.classList.add("bg-active");
-      } else {
-        header.classList.remove("bg-active");
-      }
     });
   </script>
 </html>
