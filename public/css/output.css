@@ -1108,6 +1108,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:h-\[1200px\] {
+    height: 1200px;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
